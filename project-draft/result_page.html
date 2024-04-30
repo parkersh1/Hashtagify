@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Junhee Park, Ji Min Sung, Parker Huang, Cole Meier">
+        <meta name="description" content="Result Page of the Concerto">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <title>Concerto</title>
+
+        <!-- normalize.css for cross-browser stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+        <!-- include required fonts -->
+        <!-- Montserrat Medium -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+        <!--Link to my css -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <nav class="top-nav">
+            <li><a href="index.html" class="logo">Concerto.</a></li>
+            <div class="navbar">
+                <li><a href="event.html">Upload</a></li>
+                <li><a href="#">Log-In</a></li>
+            </div>
+        </nav>
+        <header>
+            <div class="searchbar-result">
+                <form>
+                    <label for="location">City or zip code</label>
+                    <input type="text-result" placeholder="City or zip code...">
+
+                    <label for="search-result">Search by artist...</label>
+                    <input class="search-result" type="text" placeholder="Search by artist, event or venue...">
+
+                    <label for="search-btn">Search</label>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </header>
+        
+        <main>
+            <div class="container-result">
+                <section class="feature-1">
+                    <h1>Discover New Favorites</h1>
+                </section>
+                <section class="card-result">
+                    <div class="section-2-container-result">
+                        <img class="arrow" src= "img/left-arrow.png" alt="left arrow">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <img src="img/poolside.jpeg" alt="poolside image">
+                            <p class="artist">Poolside</p>
+                            <p class="place">Showbox</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">February 02, Tuesday</p>
+                            <p class="time">7:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <img src="img/the-veils.jpeg" alt="the veils image">
+                            <p class="artist">The Veils</p>
+                            <p class="place">Sunset Tavern</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">April 12, Tuesday</p>
+                            <p class="time">8:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <img src="img/boywithuke.jpeg" alt="boywithuke image">
+                            <p class="artist">BoyWithUke</p>
+                            <p class="place">The Crocodile</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">January 29, Monday</p>
+                            <p class="time">7:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <img class="arrow" src= "img/right-arrow.png" alt="right arrow">
+                    </div>
+                </section>
+
+                <section class="Event">
+                    <h1>Event In <span> Seattle</span></h1>
+                </section>
+
+                <section>
+                    <div class="event-list">
+                        <div class="event-info">
+                            <p class="date">Jan 22</p>
+                            <p class="details">Taylor Swift Eras Tour - Climate Pledge Arena</p>
+                            <a href="information_page.html">
+                                <button class="info-btn">More info</button>
+                            </a>
+                        </div>
+                        <div class="event-info">
+                            <p class="date">Jan 26</p>
+                            <p class="details">One Direction - Climate Pledge Arena</p>
+                            <a href="information_page.html">
+                                <button class="info-btn">More info</button>
+                            </a>
+                        </div>
+                        <div class="event-info">
+                            <p class="date">Jan 27</p>
+                            <p class="details">WINFO Sing-along - Meany Hall</p>
+                            <a href="information_page.html">
+                                <button class="info-btn">More info</button>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+        </main>
+
+        <!-- Footer with Copyright & Contact Information -->
+        <footer class="footer">
+            <h1>Concerto. <span class="font_1"> -Feel the Music, Live the Moment!</span></h1>
+            <p>Contact Info</p>
+            <p class="gmail">rusu0531@uw.edu</p>
+            <p class="gmail">psh1@uw.edu</p>
+            <p class="gmail">jsung22@uw.edu</p>
+            <p class="gmail">ctm41804@uw.edu</p>
+            <p class="copyright">&copy; 2024 Concerto</p>
+
+        </footer>
+    </body>
+</html>

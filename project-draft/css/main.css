@@ -1,0 +1,884 @@
+/* main style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    background-color: #000;
+}
+
+
+/* navigation bar style */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+}
+
+
+.top-nav li > a,
+.logo {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.logo {
+    font-family: "Kaisei Decol";
+    font-size: 3rem;
+    padding: 10px 20px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    margin-right: 20px;
+}
+
+
+.navbar p {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+
+
+.motto {
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../img/background.jpg') center/cover;
+}
+
+
+h1 {
+    margin: 0;
+    margin-bottom: 40px;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+ /* Artist recommendation card*/
+
+
+.section-2-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+ .column-1,
+ .column-2 {
+     padding: 1em;
+ }
+
+
+.column-1 {
+    flex-basis: 240px;
+  }
+
+
+.column-1 h1 {
+    margin: 25px 0 0 90px;
+    font-size: 25px;
+}
+ 
+.column-2 {
+    flex: 1;
+    flex-grow: 1;
+    margin-bottom: 90px;
+}
+ 
+.card {
+    flex: 0 0 250px;
+    flex-shrink: none;
+    flex-grow: none;
+    margin: 0.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    position: relative;
+    padding-bottom: 6rem;
+}
+ 
+.card p {
+    padding: 0.5rem 1rem;
+}
+ 
+.card img {
+    border-radius: 10px 10px 0 0;
+    width: 400px;
+    height: 9.5625rem;
+    object-fit: cover;
+}
+
+
+.card p.artist,
+.card p.place {
+    display: inline;
+}
+
+
+.card p.place,
+.card p.location {
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+}
+
+
+.card p.date,
+.card p.time {
+    position: absolute;
+    font-size: 14px;
+}
+
+
+.card p.location {
+    top: 175px;
+}
+
+
+.card p.date {
+    top: 215px;
+}
+.card p.time {
+    top: 235px;
+}
+
+
+.card p.artist{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+
+.card-button {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    background-color: black;
+    color: white;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+
+ /* Arrows for column-2 (card)*/
+
+
+img.arrow {
+    height: 30px;
+    width: auto;
+    margin: auto;
+}
+
+
+/* Searchbar */
+.searchbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.search-2 {
+    width: 450px;
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+form label {
+    display: none;
+}
+
+
+input {
+    font-size: 14px;
+    padding: 10px;
+    width: auto;
+    outline: none;
+    border: none;
+}
+
+
+.searchbar button,
+.searchbar-result button {
+    font-size: 14px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+
+/* change color of every button when hover */
+button:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+
+/* Result page */
+
+
+/* Search bar for result page */
+.searchbar-result {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.search-result {
+    width: 750px;
+}
+
+
+/* Card feature */
+
+.feature-1 h1 {
+    margin-left: 105px;
+    font-size: 25px;
+}
+
+
+.card-result {
+    flex: 1;
+    flex-grow: 1;
+}
+ 
+.section-2-container-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Event list feature */
+.event-list {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+
+.event-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: .5px solid #ccc;
+    padding: 10px 0px;
+    width: 100%;
+}
+
+
+.event-info > .date {
+    font-weight: bold;
+    color: #fff;
+    width: 50px;
+}
+
+
+.event-info > .details {
+    flex-grow: 1;
+    padding: 0 10px;
+    color: white;
+}
+
+
+.info-btn,
+.submit-btn {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    min-width: 120px;
+}
+
+
+.info-btn:hover {
+    background-color: rgb(63, 63, 63);
+}
+
+
+.Event {
+    flex-basis: 240px;
+}
+
+
+.Event h1 {
+    margin: 25px 0 0 100px;
+    font-size: 25px;
+}
+
+
+.Event h1 > span {
+    color: #007bff;
+}
+
+
+.pic img {
+    width: 130%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px 0 0 150px;
+}
+
+
+/* Resize heading text */
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    margin: 95px 0 0 40px;
+    text-align: left;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    margin: 25px 0 0 60px;
+    text-align: left;
+}
+
+
+/* Info page buttons */
+
+
+.find-tickets-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 50px 0 0 230px;
+}
+
+
+.find-tickets-button:hover {
+    background-color: white;
+}
+
+
+.upload-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-left: 220px;
+    width: auto;
+}
+
+
+.nav-container {
+    display: flex;
+    padding: 20px;
+    margin: 10px;
+}
+
+
+.tab-button {
+    background: #007bff;
+    border-radius: 20px;
+    border: none;
+    padding: 15px 40px;
+    margin: auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    justify-content: center;
+}
+
+
+.tab-button:hover,
+.tab-button:focus {
+    color: #007bff;
+}
+
+
+.sort-opt {
+    margin-left: 500px;
+    border: none;
+    color: white;
+}
+
+
+/* Info page review tabs */
+
+
+.reviews {
+    max-width: 600px;
+    margin: 20px 0 0 60px;
+}
+
+
+.review-card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.16);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    gap: 1rem;
+}
+
+
+.profile-pic {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+.review-author {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: white;
+}
+
+
+.review-text {
+    color: white;
+    margin: 5px 0;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+
+
+}
+
+.upload-review-container {
+    margin-top: 50px;
+    margin-left: 50px;
+    display: flex;
+}
+
+.upload-review {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+}
+
+.upload-btn:hover {
+    background-color: white;
+}
+
+.upload-review img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+}
+
+.upload-review h2 {
+    margin: 0 15px 20px 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.upload-review h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin: 25px 60px 0 60px;
+    text-align: center;
+   
+}
+
+.upload-review img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 0;
+}
+
+.upload-review p {
+    margin: 0 20px 20px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+}
+
+.upload-review form {
+    display: flex;
+    flex-direction: column;
+    margin-left: -5px;
+    height: 300px;
+    width: 475px;
+    padding: 10px;
+}
+
+.upload-review textarea {
+    width: 100%;
+    height: 110%;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.upload-review button {
+    margin-top: 75px;
+    padding: 5px 100px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: larger;
+}
+
+.desc {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: white;
+    margin: auto;
+    text-align: center;
+    width: auto;
+    padding-top: 50px;
+}
+
+/* Event Detail Spacing */
+.eventname,
+.genre,
+.date,
+.location,
+.details,
+.image {
+    margin-bottom: 20px;
+}
+
+
+/* Creating Large Txt Box */
+.larger-input-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    height: 150px;
+    background-color: white;
+}
+
+
+/* Event Information Styling */
+.information h1 {
+    color: #ffffff;
+}
+
+
+.information {
+    background: url('../img/background.jpg') center/cover;
+}
+
+
+.information{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+/* Upload Image Styling */
+.image-input-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Footer style*/
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.footer h1 {
+    padding: 10px 20px;
+    font-family: "Kaisei Decol";
+    font-weight: normal;
+}
+
+.footer .font_1 {
+    font-family: "Kaisei Decol";
+    font-size: 22px;
+}
+
+.footer p {
+    padding: 10px 50px;
+    font-family: "Kaisei Decol";
+    font-size: 22px;
+}
+
+p.gmail {
+    display: inline;
+    font-size: 17px;
+}
+
+p.copyright {
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+/* Event Header Spacing */
+.event-header {
+    text-align: center;
+    padding: 5px;
+}
+
+
+/* Event Motto Color */
+.event-header h1 {
+    color: white;
+}
+
+
+/* Media queries for different screens sizes */
+
+
+ @media (max-width: 1350px) {
+    .arrow {
+        display: none;
+    }
+    .column-1 {
+        margin: 0 0 0 55px;
+    }
+    .event-list {
+        width: 90%;
+    }
+    .feature-1 h1{
+        margin: 25px 0 10px 25px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 800px) {
+    .top-nav {
+        align-items: flex-start;
+    }
+    .navbar {
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 11px;
+    }
+    .searchbar,
+    .searchbar-result {
+        position: static;
+        width: 50vh;
+        padding: 0;
+    }
+    .searchbar h1 {
+        font-size: 1rem;
+    }
+    .searchbar-result {
+        width: 50vh;
+    }
+    .search-2,
+    form input[type='text'] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .arrow {
+        display: none;
+    }
+
+    .column-1 h1 {
+        margin-left: 15px;
+    }
+
+    .search-result {
+        margin-top: 11px;
+    }
+    .Event h1 {
+        margin-left: 5%;
+        margin-bottom: 5%;
+    }
+
+    .upload-review {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.16);
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        text-align: center;
+        height: 500px;
+        width: 250px;
+        margin-right: 120px;
+        margin-top: 20px;
+    }
+
+    .upload-review textarea {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .desc {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: white;
+        margin: 50px 5px 0 0;
+        text-align: center;
+        width: auto;
+    }
+
+    .upload-review form {
+        display: flex;
+        flex-direction: column;
+        margin-left: -5px;
+        height: 250px;
+        width: 220px;
+        padding: 10px;
+    }
+
+    .review-card {
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.16);
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        margin-left: 74px;
+        gap: 1rem;
+        flex-direction: column;
+        width: 50%;
+    }
+   
+    .upload-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-left: 95px;
+        width: auto;
+    }
+
+    .tab-button {
+        background: #007bff;
+        border-radius: 20px;
+        border: none;
+        padding: 15px 40px;
+        margin: 30px;
+        cursor: pointer;
+        color: #fff;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-container {
+        display: flex;
+        padding: 20px;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .sort-opt {
+        margin-left: 130px;
+        margin-bottom: 60px;
+        border: none;
+        color: white;
+    }
+
+    .find-tickets-button {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        margin: 25px 0 0 110px;
+    }
+}
+
+

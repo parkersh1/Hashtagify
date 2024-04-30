@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Junhee Park, Ji Min Sung, Parker Huang, Cole Meier">
+        <meta name="description" content="Information Page of Concerto">
+        <title>Concerto</title>
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <!-- normalize.css for cross-browser stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+        <!-- include required fonts -->
+        <!-- Montserrat Medium -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <!--Montserrat SemiBold -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+        <!--Link to my css -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+
+
+    <body>
+        <nav class="top-nav">
+            <li><a href="index.html" class="logo">Concerto.</a></li>
+            <div class="navbar">
+                <li><a href="event.html">Upload</a></li>
+                <li><a href="#">Log-In</a></li>
+            </div>
+        </nav>
+        <header>
+            <div class="header-container">
+                <h2> LANY A Beautiful Blur: The World Tour - Seattle</h2>
+            </div>
+        </header>
+       
+        <main>
+            <div class="desc">
+                <p>
+                    " Join us for an unforgettable night as we welcome the sensational
+                    American alternative rock duo, LANY "
+                </p>
+            </div>
+
+
+
+
+            <div class="nav-container">
+                <button class="tab-button" data-for-tab="1">MORE INFO</button>
+                <button class="tab-button" data-for-tab="2">REVIEWS</button>
+                <button class="tab-button" data-for-tab="3">TICKETS</button>
+            </div>
+
+
+
+
+            <div class="sort-opt">
+                <label for="sort">Sort by</label>
+                <select id="sort">
+                    <option value="date">Date</option>
+                    <option value="rating" selected>Rating</option>
+                </select>
+            </div>
+
+
+
+
+            <div class="main-content">
+                <div class="reviews">
+                    <div class="review-card">
+                        <img src="img/review-1.jpg" alt="user1" class="profile-pic">
+                        <div class="revie-content">
+                            <div class="review-author">Mike</div>
+                            <div class="review-text">The best concert I’ve ever had! I would definitely go again!</div>
+                        </div>
+                    </div>
+   
+                    <div class="review-card">
+                        <img src="img/review-2.jpg" alt="user2" class="profile-pic">
+                        <div class="revie-content">
+                            <div class="review-author">Alice</div>
+                            <div class="review-text">An eye opening experience. I recommend everyone check it out!</div>
+                        </div>
+                    </div>
+                   
+                    <div class="review-card">
+                        <img src="img/review-3.jpg" alt="user3" class="profile-pic">
+                        <div class="revie-content">
+                            <div class="review-author">Jenny</div>
+                            <div class="review-text">It was so much fun!</div>
+                        </div>
+                    </div>
+                    <button class="find-tickets-button">View More</button>
+                    <div class="upload-review-container">
+                        <div class="upload-review">
+                            <h2>Concert Review</h2>
+                            <h3>Rate your experience below</h3>
+                            <img src="img/Review.png" alt="star rating" class="upload-review-img">
+                            <form action="/submit-review" method="post">
+                                <label for="reviewbox">Describe your experience</label>
+                                <textarea id="reviewbox" name="textbox" placeholder="My experience was..." rows="4" class="upload-review"></textarea>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="upload-btn">Upload Review</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <h1>Concerto. <span class="font_1"> -Feel the Music, Live the Moment!</span></h1>
+            <p>Contact Info</p>
+            <p class="gmail">rusu0531@uw.edu</p>
+            <p class="gmail">psh1@uw.edu</p>
+            <p class="gmail">jsung22@uw.edu</p>
+            <p class="gmail">ctm41804@uw.edu</p>
+            <p class="copyright">&copy; 2024 Concerto</p>
+        </footer>
+    </body>
+</html>

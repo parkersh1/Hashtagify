@@ -1,0 +1,15 @@
+body {
+    font-family: "Helvetica";
+    margin: 20px;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-style: italic;
+    text-decoration: underline;
+}

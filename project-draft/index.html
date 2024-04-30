@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Junhee Park, Ji Min Sung, Parker Huang, Cole Meier">
+        <meta name="description" content="Main Page of the Concerto">
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <title>Concerto</title>
+        
+        
+        <!-- normalize.css for cross-browser stuff -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- include required fonts -->
+        <!-- Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+        <!--Link to my css -->
+        <link rel="stylesheet" href="css/main.css">
+
+    </head>
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="top-nav">
+            <li><a href="index.html" class="logo">Concerto.</a></li>
+            <div class="navbar">
+                <li><a href="event.html">Upload</a></li>
+                <li><a href="#">Log-In</a></li>
+            </div>
+        </nav>
+        <!-- Header Elements with Searchbar -->
+        <header>
+            <div class="motto">
+                <div class="searchbar">
+                    <h1>Feel the Music, Live the Moment!</h1>
+                    <form>
+                        <label for="city-zip-code">City or Zip Code:</label>
+                        <input type="text" placeholder="City or zip code...">
+
+                        <label for="search-artist-event-venue">Search by Artist, Event, or Venue:</label>
+                        <input class="search-2" type="text" placeholder="Search by artist, event or venue...">
+                        <a href="result_page.html">
+                            <button type="button">Search</button>
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </header>
+        <!-- Recommendation Cards List -->
+        <main>
+            <div class="container">
+                <section class="column-1">
+                    <h1>Recommendation</h1>
+                </section>
+                <section class="column-2">
+                    <div class="section-2-container">
+                        <img class="arrow" src= "img/left-arrow.png" alt="left next">
+                        <!-- Card 1 -->
+                        <div class="card">
+                            <img src="img/rad-museum.png" alt="A picture of Rad Museum">
+                            <p class="artist">Rad Museum</p>
+                            <p class="place">Neumos</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">February 6, Tuesday</p>
+                            <p class="time">7:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="card">
+                            <img src="img/lany.png" alt="A picture of LANY">
+                            <p class="artist">LANY</p>
+                            <p class="place">Paramount Theatre</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">March 13, Tuesday</p>
+                            <p class="time">8:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="card">
+                            <img src="img/car-the-garden.png" alt="A picture of Car the Garden">
+                            <p class="artist">Car the Garden</p>
+                            <p class="place">The Crocodile</p>
+                            <p class="location">Seattle, WA</p>
+                            <p class="date">January 29, Monday</p>
+                            <p class="time">7:00pm</p>
+                            <a href="information_page.html">
+                                <button type="button" class="card-button">Find tickets</button>
+                            </a>
+                        </div>
+                        <img class="arrow" src= "img/right-arrow.png" alt="right next">
+                    </div>
+                </section>
+        </main>
+
+        <!-- Footer with Copyright & Contact Information -->
+        <footer class="footer">
+            <h1>Concerto. <span class="font_1"> -Feel the Music, Live the Moment!</span></h1>
+            <p>Contact Info</p>
+            <p class="gmail">rusu0531@uw.edu</p>
+            <p class="gmail">psh1@uw.edu</p>
+            <p class="gmail">jsung22@uw.edu</p>
+            <p class="gmail">ctm41804@uw.edu</p>
+            <p class="copyright">&copy; 2024 Concerto</p>
+
+        </footer>
+    </body>
+</html>
+
