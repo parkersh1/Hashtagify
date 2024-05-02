@@ -118,7 +118,7 @@ h1 {
     margin-bottom: 90px;
 }
  
-
+/* 
 .card {
     flex: 0 0 250px;
     flex-shrink: none;
@@ -130,6 +130,12 @@ h1 {
     position: relative;
     padding-bottom: 6rem;
     transition: transform 0.5s ease-in-out;
+} */
+
+.card {
+    width: 0;
+
+    color: transparent;
 }
  
 

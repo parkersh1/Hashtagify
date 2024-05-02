@@ -30,7 +30,7 @@ export function Card(props) {
 
     const cardElements = [...recommendations, ...recommendations, ...recommendations].slice(current, current + 3).map((card, index) => (
         <div key={index} className="card">
-            <img src={card.image} alt="Artist"/>
+            {/* <img src={card.image} alt="Artist"/> */}
             <p className="artist">{card.event_title}</p>
             <p className="place">{card.location_name}</p>
             <p className="location">{card.location_city_state}</p>

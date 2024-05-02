@@ -12,7 +12,7 @@ export function SearchBar() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!searchParams.city.trim() && !searchParams.artistEventVenue.trim()) {
-            setErrorMessage("Please enter a city or search by artist, event, or venue.");
+            setErrorMessage("Please enter a song or artist");
             return;
         }
         setErrorMessage('');
@@ -58,7 +58,7 @@ export function SearchBarForResult() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!searchParams.city.trim() && !searchParams.artistEventVenue.trim()) {
-            setErrorMessage("Please enter a city or search by artist, event, or venue.");
+            setErrorMessage("Please enter a song or artist");
             return;
         }
         setErrorMessage('');

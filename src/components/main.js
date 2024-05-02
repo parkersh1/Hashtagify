@@ -17,7 +17,7 @@ function Main(props) {
             <main>
                 <div className="container">
                     <section className="column-1">
-                        <h1>Recommendation</h1>
+                        <h1>Recommended Playlists</h1>
                     </section>
                     <Card concertData={concertData}/>
                 </div>              

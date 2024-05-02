@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import DetailedConcertCard from './DetailedConcertCard';
+import DetailedConcertCard from './DetailedInfo';
 import mockReviews from '../data/mock_reviews.json';
 
 const Infopage = (props) => {
