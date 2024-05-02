@@ -1,40 +1,36 @@
-# INFO 340 Project
+# INFO 498 Project
 
-# Concerto
+# Spotif-AI
 
-Concerto is designed to revolutionize the way users discover and share concerts. Our platform focuses on promoting emerging artists and facilitating music lovers to find live music events in their vicinity. By bridging the gap between new musicians and potential audiences, Concerto aims to offer a seamless and inclusive experience for all music enthusiasts.
+Spotif-AI is designed to transform how users interact with and understand Spotify's music recommendation algorithm. Our platform allows users to upload their own playlists and share it with other users on the platform. Users will be shown new playlists from other users in order to expand their music library.
 
 ## Problem Statement
 
-In the era of information overload, finding concise and relevant details about live concerts can be cumbersome. Users often find themselves navigating through multiple platforms to gather essential information such as ticket availability, venue details, and event dates. The existing systems, biased towards well-known musicians, further limit the exposure of emerging artists. Our observation indicates that platforms like TicketMaster, despite their efforts, fall short in providing a clutter-free and focused solution for concert discovery, particularly for concerts by new artists.
+Spotify's current algorithm lacks transparency, often resulting in a biased and limited music discovery experience. Users find it difficult to understand why certain tracks are recommended and often miss out on discovering new or lesser-known artists.
 
-## Our Solution: Concerto
+## Our Solution: Spotif-AI
 
-Concerto emerges as a dedicated platform allowing users to find and upload concerts in their area. It aims to:
-
-- Enhance the visibility of new and emerging artists.
-- Simplify the discovery process for users seeking live music events.
-- Provide an uncluttered interface focused solely on concerts.
+Spotif-AI serves as an innovative platform that:
+- Increases transparency of the recommendation process.
+- Gives users control over the data influencing their music suggestions.
+- Promotes discovery of new and emerging artists.
 
 ### Features
 
-- **Concert Discovery:** Users can easily find information about concerts based on their location, leveraging an intuitive search functionality.
-- **Artist Promotion/User Contribution:** Emerging artists have the opportunity to upload and advertise their concerts, reaching a broader audience.
-- **Categories Filtering:** Concerts can be filtered by genre tailored to the user's preferences.
-- **Sorting Reviews:** Users can sort reviews by rating and dates to see concert reviews by their preference.
+- **User-Driven Recommendations:** Users can upload their playlists and receive suggestions based on a clearer, adjustable algorithm (based on similar songs/artists/tags)
+- **Community Engagement:** Users share and discover playlists, enhancing their music exploration.
 
 ## Target Audience
 
-- **Concert Goers:** Individuals looking to explore live music events in their area.
-- **Emerging Artists:** New musicians seeking to promote their concerts and grow their fanbase.
-- **Music Enthusiasts:** Users interested in discovering new music and supporting up-and-coming talent.
+- **Spotify Users:** Those looking to refine their music discovery process.
+- **Data Enthusiasts:** Users interested in understanding and influencing the algorithms that shape their listening habits.
 
 ## Impact
 
-By focusing on inclusivity and simplicity, Concerto addresses the critical need for a platform that supports both artists and live music enthusiasts. It provides a space for minority groups and new musicians to gain visibility, while offering users an easy way to discover and enjoy live music.
+Spotif-AI aims to democratize music recommendation by providing a user-centered approach that enhances understanding and broadens musical landscapes, ultimately fostering a richer music discovery experience for all.
 
 ## Acknowledgments
 
-- Our dedicated team: Junhee Park, Ji Min Sung, Parker Huang, Cole Meier, for their relentless effort and creativity.
+- Special thanks to our dedicated team members: Parker Huang, Clark Chin, Nicole Han, and Marie Kang.
 
-Join us in redefining concert discovery and promotion. With Concerto, your next musical adventure is just a click away!
+Spotif-AI invites you to explore a new dimension of music recommendation. Join us on this revolutionary journey to redefine how music is experienced on Spotify.
