@@ -33,7 +33,6 @@ export function SearchBar() {
             <form id="search-bar-form" onSubmit={handleSubmit}>
                 {/* <label htmlFor="city-zip-code">Type city here...</label>
                 <input type="text" name="city" placeholder="Type city here..." onChange={handleChange} value={searchParams.city} /> */}
-
                 <label htmlFor="search-artist-event-venue">Type artist, event, or venue here...</label>
                 <input
                     name="artistEventVenue" 
