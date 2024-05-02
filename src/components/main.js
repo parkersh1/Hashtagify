@@ -9,7 +9,7 @@ function Main(props) {
             <header>
                 <div className="motto">
                     <div className="searchbar">
-                        <h1>Feel the Music, Live the Moment!</h1>
+                        <h1>Tune into your true soundtrack!</h1>
                         <SearchBar />
                     </div>
                 </div>

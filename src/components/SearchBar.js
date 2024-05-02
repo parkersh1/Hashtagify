@@ -6,7 +6,7 @@ export function SearchBar() {
     const [searchParams, setSearchParams] = useState({ city: '', artistEventVenue: '' });
     const [errorMessage, setErrorMessage] = useState('');
 
-    const defaultPlaceholder = "Type artist, event, or venue here...";
+    const defaultPlaceholder = "Search by song or artist here...";
     const errorPlaceholder = errorMessage || defaultPlaceholder;
 
     const handleSubmit = (event) => {
@@ -31,8 +31,8 @@ export function SearchBar() {
     return (
         <div>
             <form id="search-bar-form" onSubmit={handleSubmit}>
-                <label htmlFor="city-zip-code">Type city here...</label>
-                <input type="text" name="city" placeholder="Type city here..." onChange={handleChange} value={searchParams.city} />
+                {/* <label htmlFor="city-zip-code">Type city here...</label>
+                <input type="text" name="city" placeholder="Type city here..." onChange={handleChange} value={searchParams.city} /> */}
 
                 <label htmlFor="search-artist-event-venue">Type artist, event, or venue here...</label>
                 <input
