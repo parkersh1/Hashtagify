@@ -67,7 +67,7 @@ const Concerto = () => {
                 type="text"
                 id="link"
                 name="link"
-                placeholder="Link to ticket sales here..."
+                placeholder="Link to Spotify playlist here..."
                 value={formData.link}
                 onChange={handleInputChange}
               />
@@ -80,7 +80,7 @@ const Concerto = () => {
                 className="larger-input-box"
                 id="further_details"
                 name="further_details"
-                placeholder="Enter event details here..."
+                placeholder="grunge, emo, vamp, opium..."
                 value={formData.further_details}
                 onChange={handleInputChange}
               ></textarea>
