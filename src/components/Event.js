@@ -6,7 +6,7 @@ import Popup from 'reactjs-popup';
 const Concerto = () => {
 
   const [formData, setFormData] = useState({
-    "ticket_link": '',
+    "link": '',
     "further_details": '',
   });
 
@@ -22,7 +22,7 @@ const Concerto = () => {
     e.preventDefault();
 
     const newEvent = {
-      "ticket_link": formData.ticket_link,
+      "link": formData.link,
       "further_details": formData.further_details,
     };
   
@@ -45,7 +45,7 @@ const Concerto = () => {
     });
 
     setFormData({
-      "ticket_link": '',
+      "link": '',
       "further_details": '',
     });
   };
@@ -61,14 +61,14 @@ const Concerto = () => {
 
             <div className="form-group">
             <h1 className='form-headers'>Link to your public Spotify playlist:</h1>
-              <label htmlFor="ticket_link">Link</label>
+              <label htmlFor="link">Link</label>
               <input
                 className="input-box"
                 type="text"
-                id="ticket_link"
-                name="ticket_link"
+                id="link"
+                name="link"
                 placeholder="Link to ticket sales here..."
-                value={formData.ticket_link}
+                value={formData.link}
                 onChange={handleInputChange}
               />
             </div>
