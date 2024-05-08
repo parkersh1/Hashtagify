@@ -9,6 +9,7 @@ function convertTagsToHashtags(tagsString) {
                      .join(' ');
 }
 
+
 export function Card(props) {
     const { concertData } = props;
     const [recommendations, setRecommendations] = useState([]);

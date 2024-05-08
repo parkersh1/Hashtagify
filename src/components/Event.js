@@ -23,7 +23,7 @@ const Concerto = () => {
 
     const newEvent = {
       "link": formData.link,
-      "tags": formData.tags.split(',').map(tag => tag.trim().toLowerCase()), // split string into array and trim spaces
+      "tags": formData.tags,
     };
   
     const hasEmptyField = Object.values(formData).some(value => value.trim() === '');
