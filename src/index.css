@@ -64,7 +64,6 @@ body {
     justify-content: center;
     align-items: center;
     background: url('../public/img/background.png') center/cover;
-    /* filter: brightness(80%); */
 }
 
 
@@ -74,7 +73,7 @@ h1 {
     text-decoration: none;
     font-size: 2rem;
     font-weight: 600;
-    color: white;
+    color: #fff;
 }
 
 
@@ -130,12 +129,7 @@ h1 {
     position: relative;
     padding-bottom: 6rem;
     transition: transform 0.5s ease-in-out;
-}
-
-.card {
-    width: 0;
-
-    color: transparent;
+    width: 400px;
 }
  
 
@@ -1074,4 +1068,3 @@ p.copyright {
         margin: 50px 20px 0 0px;
     }
 }
-

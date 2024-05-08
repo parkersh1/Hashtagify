@@ -1,6 +1,7 @@
 import React from 'react';
 import { SearchBar } from './SearchBar';
 import { Card } from './Card';
+import { Spotify } from 'react-spotify-embed';
 
 function Main(props) {
     const { concertData } = props;
@@ -18,7 +19,7 @@ function Main(props) {
                 <div className="container">
                     <section className="column-1">
                         <h1>Recommended Playlists</h1>
-                    </section>
+                        </section> 
                     <Card concertData={concertData}/>
                 </div>              
             </main>

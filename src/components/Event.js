@@ -7,7 +7,7 @@ const Concerto = () => {
 
   const [formData, setFormData] = useState({
     "link": '',
-    "further_details": '',
+    "tags": '',
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
@@ -23,7 +23,7 @@ const Concerto = () => {
 
     const newEvent = {
       "link": formData.link,
-      "further_details": formData.further_details,
+      "tags": formData.tags,
     };
   
     const hasEmptyField = Object.values(formData).some(value => value.trim() === '');
@@ -46,7 +46,7 @@ const Concerto = () => {
 
     setFormData({
       "link": '',
-      "further_details": '',
+      "tags": '',
     });
   };
 
@@ -75,13 +75,13 @@ const Concerto = () => {
 
             <div className="form-group">
             <h1 className='form-headers'>Tags (separate with commas):</h1>
-              <label htmlFor="further_details">Further Details</label>
+              <label htmlFor="tags">Further Details</label>
               <textarea
                 className="larger-input-box"
-                id="further_details"
-                name="further_details"
+                id="tags"
+                name="tags"
                 placeholder="grunge, emo, vamp, opium..."
-                value={formData.further_details}
+                value={formData.tags}
                 onChange={handleInputChange}
               ></textarea>
             </div>

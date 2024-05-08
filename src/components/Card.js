@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Spotify } from 'react-spotify-embed';
 
 export function Card(props) {
     const { concertData } = props;
@@ -30,13 +31,9 @@ export function Card(props) {
 
     const cardElements = [...recommendations, ...recommendations, ...recommendations].slice(current, current + 3).map((card, index) => (
         <div key={index} className="card">
-            {/* <img src={card.image} alt="Artist"/> */}
-            <p className="artist">{card.event_title}</p>
-            <p className="place">{card.location_name}</p>
-            <p className="location">{card.location_city_state}</p>
-            <p className="date">{card.date + ', ' + card.date_day}</p>
-            <p className="time">{card.time}</p>
-            <Link to={`/Infopage/${encodeURIComponent(card.event_title)}`}>
+            <p className="link"><Spotify link={card.link} /></p>
+            <p className="tags">{card.tags}</p>
+            <Link to={`/Infopage/${encodeURIComponent(card.link)}`}>
                 <button type="button" className="card-button">More info</button>
             </Link>
         </div>
