@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Spotify } from 'react-spotify-embed';
 
+// Utility function to convert comma-separated tags to hashtags
+function convertTagsToHashtags(tagsString) {
+    return tagsString.split(',')
+                     .map(tag => `#${tag.trim().replace(/\s+/g, '_')}`) // Replace spaces with underscores
+                     .join(' ');
+}
+
 export function Card(props) {
     const { concertData } = props;
     const [recommendations, setRecommendations] = useState([]);
@@ -32,7 +39,7 @@ export function Card(props) {
     const cardElements = [...recommendations, ...recommendations, ...recommendations].slice(current, current + 3).map((card, index) => (
         <div key={index} className="card">
             <p className="link"><Spotify link={card.link} /></p>
-            <p className="tags">{card.tags}</p>
+            <p className="tags">{convertTagsToHashtags(card.tags)}</p>
             <Link to={`/Infopage/${encodeURIComponent(card.link)}`}>
                 <button type="button" className="card-button">More info</button>
             </Link>
@@ -49,4 +56,3 @@ export function Card(props) {
         </section>
     );
 }
-

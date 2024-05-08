@@ -13,30 +13,23 @@ const Result = (props) => {
 
     useEffect(() => {
         const searchParams = location.state ? location.state.searchParams : { city: '', artistEventVenue: '' };
-
-        let filtered = concertData;
+    
+        let filtered = concertData || []; // Ensure concertData is an array even if it's undefined
         
-        if (searchParams.city || searchParams.artistEventVenue) {
+        // Update the filter logic to match the available properties
+        if (searchParams.artistEventVenue) {
             filtered = filtered.filter((event) => {
-                const locationMatch = searchParams.city ? event.location_city_state.toLowerCase().includes(searchParams.city.toLowerCase()) : true;
-                const titleMatch = searchParams.artistEventVenue ? event.event_title.toLowerCase().includes(searchParams.artistEventVenue.toLowerCase()) : true;
-                return locationMatch && titleMatch;
+                const titleMatch = event.tags ? 
+                                   event.tags.toLowerCase().includes(searchParams.artistEventVenue.toLowerCase()) : 
+                                   true;
+                return titleMatch;
             });
         }
-
-        if (selectedGenre) {
-            filtered = filtered.filter((event) => event.genre.toLowerCase() === selectedGenre.toLowerCase());
-        }
-
+    
         setFilteredData(filtered);
-
-        if (filtered.length > 0) {
-            setCityName(filtered[0].location_city_state);
-        } else {
-            setCityName(searchParams.city);
-        }
-
-    }, [concertData, location.state, selectedGenre]);
+    
+    }, [concertData, location.state]);
+    
 
     const handleGenreClick = (genre) => {
         if (genre === selectedGenre) {
