@@ -64,6 +64,8 @@ body {
     justify-content: center;
     align-items: center;
     background: url('../public/img/background.png') center/cover;
+    margin-top: 10px;
+    
 }
 
 
