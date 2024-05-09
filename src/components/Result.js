@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SearchBar} from './SearchBar';
+import { SearchBar } from './SearchBar'; // Assuming SearchBar is correctly implemented
 import { Card } from './Card';
 import { Link } from 'react-router-dom';
 
@@ -11,18 +11,22 @@ const Result = (props) => {
 
     useEffect(() => {
         const searchParams = location.state ? location.state.searchParams : { artistEventVenue: '' };
-    
-        let filtered = concertData || []; // Ensure concertData is an array even if it's undefined
-        
+        console.log("Received search params:", searchParams);
+
+        let filtered = concertData || [];
+        console.log("Initial concert data:", concertData);
+
         if (searchParams.artistEventVenue) {
             filtered = filtered.filter(event => {
                 const tagsArray = event.tags.split(',').map(tag => tag.trim().toLowerCase()); // Split and trim tags
+                console.log("Tags for event", event.event_title, ":", tagsArray);
                 return tagsArray.some(tag => tag.includes(searchParams.artistEventVenue.toLowerCase()));
             });
         }
-    
+
+        console.log("Filtered data:", filtered);
         setFilteredData(filtered);
-    
+
     }, [concertData, location.state]);
 
     const resultList = filteredData.length > 0 ? (
@@ -41,7 +45,7 @@ const Result = (props) => {
                             <div className="event-info">
                                 <p className="no-result">No Events Found</p>
                             </div>
-                        )
+                        );
 
     return (
         <div>
@@ -65,5 +69,6 @@ const Result = (props) => {
         </div>
     );
 };
+
 
 export default Result;

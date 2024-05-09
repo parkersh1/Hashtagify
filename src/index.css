@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Circular-black', sans-serif;
 }
 
 
@@ -31,7 +31,7 @@ body {
 
 
 .logo {
-    font-family: "Kaisei Decol";
+    font-family: "Circular-black";
     font-size: 3rem;
     padding: 10px 20px;
 }
@@ -64,7 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     background: url('../public/img/background.png') center/cover;
-    margin-top: 10px;
+    margin-top: 8px;
     
 }
 
@@ -529,6 +529,11 @@ h3 {
     color: white; 
   }
   
+  .jersey-25-charted-regular {
+    font-family: "Jersey 25 Charted", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
   
 .review-author {
     font-weight: bold;
@@ -655,20 +660,20 @@ h3 {
 
 .footer h1 {
     padding: 10px 20px;
-    font-family: "Kaisei Decol";
+    font-family: "Circular-black";
     font-weight: normal;
 }
 
 
 .footer .font_1 {
-    font-family: "Kaisei Decol";
+    font-family: "Circular-black";
     font-size: 22px;
 }
 
 
 .footer p {
     padding: 10px 50px;
-    font-family: "Kaisei Decol";
+    font-family: "Circular-black";
     font-size: 22px;
 }
 

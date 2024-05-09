@@ -1,7 +1,6 @@
 import React from 'react';
 import { SearchBar } from './SearchBar';
 import { Card } from './Card';
-import { Spotify } from 'react-spotify-embed';
 
 function Main(props) {
     const { concertData } = props;

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Spotify } from 'react-spotify-embed';
 
-// Utility function to convert comma-separated tags to hashtags
+// function to convert comma-separated tags to hashtags
 function convertTagsToHashtags(tagsString) {
     return tagsString.split(',')
-                     .map(tag => `#${tag.trim().replace(/\s+/g, '_')}`) // Replace spaces with underscores
+                     .map(tag => `#${tag.trim().replace(/\s+/g, '_')}`) // replace spaces with underscores
                      .join(' ');
 }
 
