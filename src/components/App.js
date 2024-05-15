@@ -1,48 +1,28 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Main from './main';
 import Navbar from './NavBar';
-import Result from './Result';
-import Infopage from "./Infopage";
-import Event from "./Event";
 import Footer from './Footer';
+import LoginPage from './LoginPage';
+import Result from './Result';
+import Infopage from './Infopage';
+import Event from './Event';
 
-export default function App(props) {
-  const [concertData, setConcertData] = useState(props.concertData);
-
-  const addNewEvent = (newEvent) => {
-    const updatedEvents = [...concertData, newEvent];
-    setConcertData(updatedEvents);
-  };
-
+function App() {
   return (
-    <div>
-      <BrowserRouter>
-        <Navbar aria-label="NavBar" />
-        <Routes>
-          <Route
-            path="/"
-            element={<Main concertData={concertData} />}
-            aria-label="Home"
-          />
-          <Route
-            path="/Result"
-            element={<Result concertData={concertData} />}
-            aria-label="Result"
-          />
-          <Route
-            path="/Infopage/:concertTitle"
-            element={<Infopage concertData={concertData} />}
-            aria-label="Infopage"
-          />
-          <Route
-            path="/Event"
-            element={<Event onAddNewEvent={addNewEvent} />}
-            aria-label="Event"
-          />
-        </Routes>
-        <Footer aria-label="Footer" />
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/home" element={<Main />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/infopage/:concertTitle" element={<Infopage />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/" element={<Navigate replace to="/login" />} />  // Redirect to login by default
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
-};
+}
+
+export default App;
