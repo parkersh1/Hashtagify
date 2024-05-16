@@ -28,9 +28,15 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      <button onClick={handleGoogleSignIn}>Sign in with Google</button>
+    <div className="login-container">
+      <div className="login-box">
+        <h1 className="login-header">Login to Your Account</h1>
+        <button onClick={handleGoogleSignIn} className="google-signin-btn">
+          <img src="/img/google-icon.png" alt="Google logo" className="google-logo" />
+          Sign in with Google
+        </button>
+        <p className="login-footer">Sign in to access personalized features</p>
+      </div>
     </div>
   );
 }
