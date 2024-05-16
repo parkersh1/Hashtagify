@@ -11,6 +11,29 @@ body {
     background-color: #0b0702;
 }
 
+
+.all-playlists-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.playlist-card {
+    width: 400px;
+    min-height: 400px;
+    margin: 0.5rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+
+
+
 /* LoginPage styling */
 .login-container {
     display: flex;

@@ -23,23 +23,23 @@ const Result = (props) => {
         }
     }, [concertData, location.state]);
 
-    const resultList = filteredData.length > 0 ? (
-        <div className="event-list">
-            {filteredData.map((event, index) => (
-                <div key={index} className="event-info">
-                    <p className="date">{event.date}</p>
-                    <p className="details">{event.event_title} - {event.location_name}</p>
-                    <Link to={`/Infopage/${encodeURIComponent(event.event_title)}`}>
-                        <button className="info-btn">More info</button>
-                    </Link>
-                </div>
-            ))}
-        </div>
-    ) : (
-        <div className="event-info">
-            <p className="no-result">No Events Found</p>
-        </div>
-    );
+    // const resultList = filteredData.length > 0 ? (
+    //     <div className="event-list">
+    //         {filteredData.map((event, index) => (
+    //             <div key={index} className="event-info">
+    //                 <p className="date">{event.date}</p>
+    //                 <p className="details">{event.event_title} - {event.location_name}</p>
+    //                 {/* <Link to={`/Infopage/${encodeURIComponent(event.event_title)}`}>
+    //                     {/* <button className="info-btn">More info</button> */}
+    //                 </Link> */}
+    //             </div>
+    //         ))}
+    //     </div>
+    // ) : (
+    //     <div className="event-info">
+    //         <p className="no-result">No Events Found</p>
+    //     </div>
+    // );
 
     return (
         <div>
@@ -53,9 +53,9 @@ const Result = (props) => {
                     <h1>Results</h1>
                     <Card concertData={filteredData}/>
                 </section>
-                <section>
+                {/* <section>
                     {resultList}
-                </section>
+                </section> */}
             </main>
         </div>
     );

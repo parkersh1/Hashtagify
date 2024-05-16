@@ -15,12 +15,15 @@ function Main(props) {
             if (user) {
                 setUser(user);
             } else {
-                // No user is signed in, redirect to login
                 navigate('/login');
             }
         });
-        return unsubscribe;
+        return () => unsubscribe();
     }, [navigate, auth]);
+
+    const handleViewAll = () => {
+        navigate('/all-playlists');
+    };
 
     return (
         <div>
@@ -38,7 +41,8 @@ function Main(props) {
                         <h1>Recommended Playlists</h1>
                     </section> 
                     <Card concertData={concertData} />
-                </div>              
+                    <button onClick={handleViewAll} className="view-all-btn">View All Playlists</button>
+                </div>
             </main>
         </div>
     );
