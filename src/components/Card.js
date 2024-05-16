@@ -42,9 +42,9 @@ export function Card(props) {
         <div key={index} className="card">
             <p className="link"><Spotify link={card.link} /></p>
             <p className="tags">{convertTagsToHashtags(card.tags)}</p>
-            <Link to={`/Infopage/${encodeURIComponent(card.link)}`}>
+            {/* <Link to={`/Infopage/${encodeURIComponent(card.link)}`}>
                 <button type="button" className="card-button">More info</button>
-            </Link>
+            </Link> */}
         </div>
     ));
 
