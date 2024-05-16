@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ref, push } from 'firebase/database'
+import { ref, push } from 'firebase/database';
 import { database } from '../firebaseConfig';
 import Popup from 'reactjs-popup';
 
@@ -12,14 +12,30 @@ const Concerto = () => {
 
   const [errorMessage, setErrorMessage] = useState(null);
 
+  // Function to validate Spotify URL including optional query parameters
+  const isValidSpotifyUrl = (url) => {
+    const pattern = /^(https?:\/\/)?(www\.)?(open\.spotify\.com)\/(track|playlist)\/([a-zA-Z0-9]+)(\?.*)?$/;
+    return pattern.test(url);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    if (name === "link" && value && !isValidSpotifyUrl(value)) {
+      setErrorMessage("Please enter a valid Spotify link.");
+    } else {
+      setErrorMessage(null);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validate the Spotify link
+    if (!isValidSpotifyUrl(formData.link)) {
+      setErrorMessage("Please enter a valid Spotify link.");
+      return;
+    }
 
     const newEvent = {
       "link": formData.link,
@@ -37,16 +53,15 @@ const Concerto = () => {
 
     const eventsRef = ref(database, 'events');
     push(eventsRef, newEvent).then(() => {
-      console.log("Event added successfully!");
-      setErrorMessage(null); 
+      console.log("Playlist added successfully!");
+      setErrorMessage("Playlist added successfully!"); 
+      setFormData({
+        "link": '',
+        "tags": '',
+      });
     }).catch(error => {
-      console.error("Error adding event: ", error);
-      setErrorMessage("Error adding the event. Please try again.");
-    });
-
-    setFormData({
-      "link": '',
-      "tags": '',
+      console.error("Error adding playlist: ", error);
+      setErrorMessage("Error adding the playlist. Please try again.");
     });
   };
 
@@ -86,20 +101,14 @@ const Concerto = () => {
               ></textarea>
             </div>
 
-            <Popup trigger={<button type="submit" className="submit-btn">Submit All</button>} modal nested>
-              {(close) => (
-              <div className='modal'>
-                <div className='modal-content'>
-                  {errorMessage ? (
+            <Popup trigger={<button type="submit" className="submit-btn" disabled={!!errorMessage}>Submit All</button>} modal nested>
+              {close => (
+                <div className='modal'>
+                  <div className='modal-content'>
                     <p className="error-message">{errorMessage}</p>
-                  ) : (
-                    <p>You Have Successfully Uploaded your Playlist!</p>
-                  )}
+                    <button onClick={() => close()} className="larger-modal-btn">Close</button>
+                  </div>
                 </div>
-                <div className="modal-content">
-                  <button onClick={() => close()} className="larger-modal-btn">Close</button>
-                </div>
-              </div>
               )}
             </Popup>
           </form>

@@ -8,17 +8,17 @@ import Result from './Result';
 import Infopage from './Infopage';
 import Event from './Event';
 
-function App() {
+function App({ concertData }) {  // Accept concertData as a prop
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/home" element={<Main />} />
-        <Route path="/result" element={<Result />} />
-        <Route path="/infopage/:concertTitle" element={<Infopage />} />
+        <Route path="/home" element={<Main concertData={concertData} />} />
+        <Route path="/result" element={<Result concertData={concertData} />} />
+        <Route path="/infopage/:concertTitle" element={<Infopage concertData={concertData} />} />
         <Route path="/event" element={<Event />} />
-        <Route path="/" element={<Navigate replace to="/login" />} />  // Redirect to login by default
+        <Route path="/" element={<Navigate replace to="/login" />} />
       </Routes>
       <Footer />
     </BrowserRouter>
