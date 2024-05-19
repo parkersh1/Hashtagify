@@ -11,6 +11,26 @@ body {
     background-color: #0b0702;
 }
 
+.view-all-btn {
+    background-color: #007bff; /* Standard blue color, matching the tag links */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.view-all-btn:hover, .view-all-btn:focus {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    color: white;
+    text-decoration: none; /* Ensure no underline appears on hover */
+}
 
 /* Adjust the playlist card styling */
 .playlist-card {
@@ -62,17 +82,18 @@ body {
 }
 
 .tag-link:hover, .tag-link:focus {
-    background-color: #0056b3;
-    color: white;
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    color: #ffffff;
+    text-decoration: none; /* Ensure no underline appears on hover */
 }
 
 .tags-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers tags horizontally */
-    margin-top: 10px; /* Space between Spotify embed and tags */
-    padding: 0 5px; /* Padding on the sides */
+    display: flex; /* Flexbox layout for the tags */
+    flex-wrap: wrap; /* Allows tags to wrap to next line */
+    justify-content: start; /* Align tags to the start */
+    padding: 10px;
 }
+
 
 /* LoginPage styling */
 .login-container {
@@ -213,6 +234,26 @@ body {
     background: url('../public/img/musicalbackground.png') center/cover;
     margin-top: 8px;
     
+}
+
+.motto button {
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.motto button:hover {
+    background-color: #0056b3; /* Darker shade on hover/focus */
+    color: white;
 }
 
 
@@ -400,11 +441,10 @@ input {
     border: none;
 }
 
-
-.searchbar button,
-.searchbar-result button {
+/* Universal button styling for search bars */
+.searchbar button, .searchbar-result button {
     font-size: 14px;
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
     border-radius: 5px;
     border: none;
     background-color: black;
@@ -412,8 +452,12 @@ input {
     cursor: pointer;
     margin: 5px;
     text-decoration: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
 }
 
+.searchbar button:hover, .searchbar-result button:hover {
+    background-color: rgb(63, 63, 63); /* Darker shade on hover */
+}
 
 /* change color of every button when hover */
 button:hover {
@@ -770,7 +814,7 @@ h3 {
 
 
 .information {
-    background: url('../public/img/musicalbackground.png') center/cover;
+    background: url('../public/img/background.png') center/cover;
 }
 
 
@@ -876,6 +920,20 @@ p.copyright {
     border-radius: 5px;
 }
 
+.input-error::placeholder {
+    color: #ff4242; /* Soft red color for error messages */
+}
+
+/* Ensure the regular placeholder text is styled differently if needed */
+input::placeholder {
+    color: #ccc; /* Default placeholder color */
+}
+
+/* Additional styling to apply to the input field itself when there's an error */
+.input-error {
+    border-color: #ff4242; /* Optional: add a red border or other styling to indicate error */
+}
+
 
 .event-main form {
     display: flex;
@@ -958,7 +1016,7 @@ p.copyright {
 
 
     .motto {
-        height: 40vh;
+        height: 40vh; /* Reduced from 55vh to 30vh for a smaller height */
     }
 
 

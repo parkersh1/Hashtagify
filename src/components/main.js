@@ -41,7 +41,7 @@ function Main(props) {
                         <h1>Recommended Playlists</h1>
                     </section> 
                     <Card concertData={concertData} />
-                    <button onClick={handleViewAll} className="view-all-btn">View All Playlists</button>
+                    <button onClick={handleViewAll} className="view-all-btn" style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px', margin: '20px auto', display: 'block' }}>View All Playlists</button>
                 </div>
             </main>
         </div>

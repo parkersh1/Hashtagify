@@ -28,7 +28,8 @@ const Result = (props) => {
         <div>
             <header>
                 <div className="motto">
-                    <SearchBar />
+                    <div className="searchbar">                                 <SearchBar />
+                    </div>
                 </div>
             </header>
             <main>

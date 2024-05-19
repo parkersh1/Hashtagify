@@ -3,48 +3,39 @@ import { useNavigate } from 'react-router-dom';
 
 export function SearchBar() {
     const navigate = useNavigate();
-    const [searchParams, setSearchParams] = useState({ city: '', artistEventVenue: '' });
+    const [searchTag, setSearchTag] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
-
-    const defaultPlaceholder = "Search by tag...";
-    const errorPlaceholder = errorMessage || defaultPlaceholder;
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!searchParams.city.trim() && !searchParams.artistEventVenue.trim()) {
-            setErrorMessage("Please enter a tag");
+        if (!searchTag.trim()) {
+            setErrorMessage("Please enter a tag");  // Set error message if input is empty
             return;
         }
-        setErrorMessage('');
-        navigate('/Result', { state: { searchParams } });
+        setErrorMessage(''); // Clear error message on successful input
+        navigate(`/result?tag=${encodeURIComponent(searchTag.trim())}`);
     };
 
     const handleChange = (event) => {
-        setSearchParams({
-            ...searchParams,
-            [event.target.name]: event.target.value,
-        });
+        setSearchTag(event.target.value);
+        if (errorMessage) setErrorMessage('');  // Clear error message when user starts typing
     };
 
-    const inputClass = errorMessage ? "search-2 error-placeholder" : "search-2";
+    const placeholderText = errorMessage || "Enter a tag..."; // Use error message as placeholder if it exists
 
     return (
         <div>
-            <form id="search-bar-form" onSubmit={handleSubmit}>
-                {/* <label htmlFor="city-zip-code">Type city here...</label>
-                <input type="text" name="city" placeholder="Type city here..." onChange={handleChange} value={searchParams.city} /> */}
-                <label htmlFor="search-artist-event-venue">Search by tag...</label>
+            <form onSubmit={handleSubmit}>
                 <input
-                    name="artistEventVenue" 
-                    className={inputClass}
-                    type="text" 
-                    placeholder={errorPlaceholder} 
-                    onChange={handleChange} 
-                    value={searchParams.artistEventVenue} 
+                    name="tag"
+                    type="text"
+                    placeholder={placeholderText}
+                    onChange={handleChange}
+                    value={searchTag}
+                    className={errorMessage ? "input-error" : ""}
                     aria-label="Search by tag"
-                />               
-                <button type="submit" aria-label="Search">Search</button>
-                {errorMessage && <div className="error-message" aria-live="polite">{errorMessage}</div>}
+                />
+                <button type="submit">Search</button>
             </form>
         </div>
     );
