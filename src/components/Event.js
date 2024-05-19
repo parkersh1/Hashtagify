@@ -11,6 +11,7 @@ const Concerto = () => {
   });
 
   const [errorMessage, setErrorMessage] = useState(null);
+  const [successMessage, setSuccessMessage] = useState(null);
 
   // Function to validate Spotify URL including optional query parameters
   const isValidSpotifyUrl = (url) => {
@@ -23,6 +24,7 @@ const Concerto = () => {
     setFormData({ ...formData, [name]: value });
     if (name === "link" && value && !isValidSpotifyUrl(value)) {
       setErrorMessage("Please enter a valid Spotify link.");
+      setSuccessMessage(null);
     } else {
       setErrorMessage(null);
     }
@@ -34,6 +36,7 @@ const Concerto = () => {
     // Validate the Spotify link
     if (!isValidSpotifyUrl(formData.link)) {
       setErrorMessage("Please enter a valid Spotify link.");
+      setSuccessMessage(null);
       return;
     }
 
@@ -46,6 +49,7 @@ const Concerto = () => {
   
     if (hasEmptyField) {
       setErrorMessage("Please fill out all the required fields.");
+      setSuccessMessage(null);
       return;
     }
   
@@ -54,7 +58,8 @@ const Concerto = () => {
     const eventsRef = ref(database, 'events');
     push(eventsRef, newEvent).then(() => {
       console.log("Playlist added successfully!");
-      setErrorMessage("Playlist added successfully!"); 
+      setSuccessMessage("Playlist added successfully!");
+      setErrorMessage(null); 
       setFormData({
         "link": '',
         "tags": '',
@@ -62,6 +67,7 @@ const Concerto = () => {
     }).catch(error => {
       console.error("Error adding playlist: ", error);
       setErrorMessage("Error adding the playlist. Please try again.");
+      setSuccessMessage(null);
     });
   };
 
@@ -73,9 +79,8 @@ const Concerto = () => {
       <main className="event-main">
         <div>
           <form onSubmit={handleSubmit} className="form-container">
-
             <div className="form-group">
-            <h1 className='form-headers'>Link to your public Spotify playlist:</h1>
+              <h1 className='form-headers'>Link to your public Spotify playlist:</h1>
               <label htmlFor="link">Link</label>
               <input
                 className="input-box"
@@ -85,11 +90,12 @@ const Concerto = () => {
                 placeholder="Link to Spotify playlist here..."
                 value={formData.link}
                 onChange={handleInputChange}
+                aria-label="Link to your public Spotify playlist"
               />
             </div>
 
             <div className="form-group">
-            <h1 className='form-headers'>Tags (separate with commas):</h1>
+              <h1 className='form-headers'>Tags (separate with commas):</h1>
               <label htmlFor="tags">Further Details</label>
               <textarea
                 className="larger-input-box"
@@ -98,6 +104,7 @@ const Concerto = () => {
                 placeholder="grunge, emo, vamp, opium..."
                 value={formData.tags}
                 onChange={handleInputChange}
+                aria-label="Tags separated with commas"
               ></textarea>
             </div>
 
@@ -105,7 +112,8 @@ const Concerto = () => {
               {close => (
                 <div className='modal'>
                   <div className='modal-content'>
-                    <p className="error-message">{errorMessage}</p>
+                    {errorMessage && <p className="error-message" aria-live="polite">{errorMessage}</p>}
+                    {successMessage && <p className="success-message" aria-live="polite">{successMessage}</p>}
                     <button onClick={() => close()} className="larger-modal-btn">Close</button>
                   </div>
                 </div>

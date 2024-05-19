@@ -39,8 +39,12 @@ export function SearchBar() {
                     className={inputClass}
                     type="text" 
                     placeholder={errorPlaceholder} 
-                    onChange={handleChange} value={searchParams.artistEventVenue} />               
-                <button type="submit">Search</button>
+                    onChange={handleChange} 
+                    value={searchParams.artistEventVenue} 
+                    aria-label="Search by tag"
+                />               
+                <button type="submit" aria-label="Search">Search</button>
+                {errorMessage && <div className="error-message" aria-live="polite">{errorMessage}</div>}
             </form>
         </div>
     );

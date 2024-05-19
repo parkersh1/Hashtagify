@@ -1,45 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { SearchBar } from './SearchBar'; // Ensure this imports correctly
+import { SearchBar } from './SearchBar';
 import { Card } from './Card';
-import { Link } from 'react-router-dom';
 
 const Result = (props) => {
-    const { concertData } = props; // Ensure this data includes the tags in the expected format
+    const { concertData } = props;
     const location = useLocation();
     const [filteredData, setFilteredData] = useState([]);
 
     useEffect(() => {
-        const searchParams = location.state ? location.state.searchParams : { artistEventVenue: '' };
+        // Extract the tag from the URL query parameters
+        const queryParams = new URLSearchParams(location.search);
+        const tag = queryParams.get('tag');
 
-        if (searchParams.artistEventVenue) {
-            const searchTags = searchParams.artistEventVenue.split(',').map(tag => tag.trim().toLowerCase());
+        if (tag) {
+            const searchTag = tag.toLowerCase();
             setFilteredData(concertData.filter(event => {
                 const eventTags = event.tags.split(',').map(tag => tag.trim().toLowerCase());
-                return searchTags.some(tag => eventTags.includes(tag)); // Checks if any search tag is included in event tags
+                return eventTags.includes(searchTag); // Checks if the search tag is included in event tags
             }));
         } else {
-            setFilteredData(concertData);
+            setFilteredData(concertData); // Default to showing all if no tag is provided
         }
-    }, [concertData, location.state]);
-
-    // const resultList = filteredData.length > 0 ? (
-    //     <div className="event-list">
-    //         {filteredData.map((event, index) => (
-    //             <div key={index} className="event-info">
-    //                 <p className="date">{event.date}</p>
-    //                 <p className="details">{event.event_title} - {event.location_name}</p>
-    //                 {/* <Link to={`/Infopage/${encodeURIComponent(event.event_title)}`}>
-    //                     {/* <button className="info-btn">More info</button> */}
-    //                 </Link> */}
-    //             </div>
-    //         ))}
-    //     </div>
-    // ) : (
-    //     <div className="event-info">
-    //         <p className="no-result">No Events Found</p>
-    //     </div>
-    // );
+    }, [concertData, location.search]); // Depend on location.search to re-run this effect when query params change
 
     return (
         <div>
@@ -51,11 +34,8 @@ const Result = (props) => {
             <main>
                 <section className="column-1">
                     <h1>Results</h1>
-                    <Card concertData={filteredData}/>
+                    <Card concertData={filteredData} />
                 </section>
-                {/* <section>
-                    {resultList}
-                </section> */}
             </main>
         </div>
     );

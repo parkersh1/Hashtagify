@@ -12,15 +12,10 @@ body {
 }
 
 
-.all-playlists-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
+/* Adjust the playlist card styling */
 .playlist-card {
-    width: 400px;
-    min-height: 400px;
+    width: 320px;  /* Adjusted width for uniformity */
+    min-height: 350px;  /* Adjusted height for uniformity */
     margin: 0.5rem;
     background-color: white;
     border-radius: 10px;
@@ -29,10 +24,55 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    align-items: center;  /* Center aligns the content for a better visual appearance */
 }
 
+/* Adjusting the grid container to ensure consistent layout */
+.all-playlists-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));  /* Responsive grid layout */
+    gap: 20px;  /* Increase gap for better spacing */
+    padding: 20px;  /* Padding around the grid */
+}
 
+/* Ensure the Spotify embed fits well */
+.spotify-embed {
+    width: 100%;  /* Full width of the card */
+    padding: 10px;  /* Padding to prevent edge touch */
+}
 
+/* Ensure hashtags are displayed neatly below each card */
+.tags {
+    font-size: 14px;
+    color: #333;
+    text-align: center;  /* Center align tags */
+    padding-top: 10px;  /* Space between Spotify embed and tags */
+}
+
+/* Styling for hashtags as button-like links */
+.tag-link {
+    display: inline-block;
+    background-color: #007bff; /* Example blue color */
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px; /* Rounded corners for the button */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.tag-link:hover, .tag-link:focus {
+    background-color: #0056b3;
+    color: white;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers tags horizontally */
+    margin-top: 10px; /* Space between Spotify embed and tags */
+    padding: 0 5px; /* Padding on the sides */
+}
 
 /* LoginPage styling */
 .login-container {
@@ -170,7 +210,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../public/img/background.png') center/cover;
+    background: url('../public/img/musicalbackground.png') center/cover;
     margin-top: 8px;
     
 }
@@ -201,7 +241,6 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
  .column-1,
  .column-2 {
@@ -731,7 +770,7 @@ h3 {
 
 
 .information {
-    background: url('../public/img/background.png') center/cover;
+    background: url('../public/img/musicalbackground.png') center/cover;
 }
 
 
