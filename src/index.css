@@ -1170,7 +1170,7 @@ input::placeholder {
       }
 }
 
-@media (min-width: 0px) and (max-width: 900px) {
+/* @media (min-width: 0px) and (max-width: 900px) {
     .top-nav {
         align-items: flex-start;
     }
@@ -1278,7 +1278,7 @@ input::placeholder {
     .sort-opt {
         margin: 50px 20px 0 0px;
     }
-}
+} */
 
 /* Smaller devices (phones, less than 768px) */
 @media (max-width: 767px) {
@@ -1305,19 +1305,16 @@ input::placeholder {
     }
 
     .playlist-card, .card {
-        width: 100%; /* Full width for mobile */
-        margin: 10px 0; /* Less margin for tighter mobile layout */
-    }
-
-    .playlist-card {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        margin: 5px 0; /* Adjust margins for tighter layout */
+        width: calc(100% - 20px); /* Full width for mobile with some padding */
+        margin: 10px 10px; /* Consistent margin for mobile layout */
+        padding: 10px; /* Uniform padding */
+        min-height: 220px; /* Minimum height to maintain aspect ratio */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Adjusted box-shadow */
     }
 
     .all-playlists-container {
         grid-template-columns: 1fr; /* Single column layout on small screens */
+        padding: 10px; /* Reduced padding for the grid container */
     }
 
     .login-box, .modal, .upload-review {
@@ -1345,7 +1342,14 @@ input::placeholder {
     .card-content {
         flex-direction: column;
     }
+
+    /* Reduce the size and margin of arrows for navigation */
+    img.arrow {
+        width: 20px; /* Smaller arrow size */
+        margin: 0 5px; /* Reduced margin around arrows */
+    }
 }
+
 
 /* Adjustments for slightly larger devices (iPads, tablets) */
 @media (min-width: 768px) and (max-width: 1024px) {
