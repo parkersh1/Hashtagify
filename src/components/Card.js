@@ -22,13 +22,8 @@ export function Card(props) {
 
     useEffect(() => {
         if (concertData && concertData.length > 0) {
-            const randomlySelectRecommendations = () => {
-                const shuffledConcerts = [...concertData].sort(() => 0.5 - Math.random());
-                return shuffledConcerts.slice(0, 6);
-            };
-
-            setRecommendations(randomlySelectRecommendations());
-            setCurrent(0);
+            const shuffledConcerts = [...concertData].sort(() => 0.5 - Math.random());
+            setRecommendations(shuffledConcerts);
         }
     }, [concertData]);
 
@@ -36,21 +31,36 @@ export function Card(props) {
         navigate(`/result?tag=${encodeURIComponent(tag)}`);
     };
 
-    const next = () => setCurrent(current >= recommendations.length - 4 ? 0 : current + 4);
-    const prev = () => setCurrent(current === 0 ? recommendations.length - 4 : current - 4);
+    const next = () => {
+        let newCurrent = current + 4;
+        if (newCurrent >= recommendations.length) {
+            newCurrent = 0; // Wraps to the start if we run out of items
+        }
+        setCurrent(newCurrent);
+    };
 
-    const cardElements = recommendations.slice(current, current + 4).map((card, index) => (
-        <div key={index} className="card">
-            <p className="link"><Spotify link={card.link} /></p>
-            {convertTagsToHashtags(card.tags, handleTagClick)}
-        </div>
-    ));
+    const prev = () => {
+        let newCurrent = current - 4;
+        if (newCurrent < 0) {
+            newCurrent = Math.max(0, recommendations.length - 4); // Wraps to the end or stays at 0
+        }
+        setCurrent(newCurrent);
+    };
+
+    const displayCards = () => {
+        return recommendations.slice(current, current + 4).map((card, index) => (
+            <div key={index} className="card">
+                <p className="link"><Spotify link={card.link} /></p>
+                {convertTagsToHashtags(card.tags, handleTagClick)}
+            </div>
+        ));
+    };
 
     return (
         <section className="column-2">
             <div className="section-2-container">
                 <img className="arrow" src="/img/left-arrow.png" alt="Left arrow" onClick={prev} />
-                {cardElements}
+                {displayCards()}
                 <img className="arrow" src="/img/right-arrow.png" alt="Right arrow" onClick={next} />
             </div>
         </section>

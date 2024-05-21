@@ -1279,3 +1279,85 @@ input::placeholder {
         margin: 50px 20px 0 0px;
     }
 }
+
+/* Smaller devices (phones, less than 768px) */
+@media (max-width: 767px) {
+    body {
+        background-color: #111; /* Slightly lighter for mobile to reduce glare */
+    }
+
+    .navbar, .top-nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo, .navbar p, .navbar-links a {
+        font-size: 14px; /* Smaller font size for mobile */
+    }
+
+    .motto {
+        height: 30vh;
+        padding: 20px;
+    }
+
+    .search-2, .searchbar-result, form input[type='text'], .searchbar button {
+        width: 100%; /* Full width */
+    }
+
+    .playlist-card, .card {
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Less margin for tighter mobile layout */
+    }
+
+    .playlist-card {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 5px 0; /* Adjust margins for tighter layout */
+    }
+
+    .all-playlists-container {
+        grid-template-columns: 1fr; /* Single column layout on small screens */
+    }
+
+    .login-box, .modal, .upload-review {
+        width: 90%; /* More margin on the sides */
+        max-width: none; /* Override any max-width set */
+    }
+
+    .event-info, .review-card, .detailed-card .card-content {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .footer, .event-list, .reviews-layout {
+        flex-direction: column;
+    }
+
+    h1, h2, h3 {
+        font-size: 16px; /* Smaller headings for mobile */
+    }
+
+    .find-tickets-button, .info-btn, .submit-btn, .tab-button {
+        width: 100%; /* Full width buttons */
+        margin: 10px 0; /* Stack buttons with space */
+    }
+
+    .card-content {
+        flex-direction: column;
+    }
+}
+
+/* Adjustments for slightly larger devices (iPads, tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .motto, .searchbar, .searchbar-result, .all-playlists-container {
+        padding: 20px; /* More padding for better spacing */
+    }
+
+    .card, .playlist-card {
+        width: 45%; /* Two cards per row in grid */
+    }
+
+    .navbar, .top-nav {
+        justify-content: space-between; /* Better spacing for navbar */
+    }
+}
