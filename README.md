@@ -34,3 +34,12 @@ Spotif-AI aims to democratize music recommendation by providing a user-centered 
 - Special thanks to our dedicated team members: Parker Huang, Clark Chin, Nicole Han, and Marie Kang.
 
 Spotif-AI invites you to explore a new dimension of music recommendation. Join us on this revolutionary journey to redefine how music is experienced on Spotify.
+
+## HOW TO RUN 
+
+- Save all files to your device
+- Ensure NPM is installed on your device
+- Open command prompt and navigate to the Hashtagify folder
+- Run "npm start"
+
+Alternatively the website can be accessed at https://tinyurl.com/498Hashtagify
