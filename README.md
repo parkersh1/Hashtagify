@@ -1,6 +1,4 @@
-# INFO 498 Project
-
-# Spotif-AI
+# Hashtagify
 
 Spotif-AI is designed to transform how users interact with and understand Spotify's music recommendation algorithm. Our platform allows users to upload their own playlists and share it with other users on the platform. Users will be shown new playlists from other users in order to expand their music library.
 
